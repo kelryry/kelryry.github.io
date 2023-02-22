@@ -4,7 +4,11 @@ const txt=document.querySelector('.tishi');
 const txt1=document.querySelector('.check');
 
 var sum= new Number;
-sum=0;
+if(!localStorage.getItem('summ')){
+    sum=0;
+}else 
+sum=localStorage.getItem('summ');
+txt.textContent='现在有'+sum+'元';
 income.onclick=function(){
     var inin=new Number;
     inin= prompt('收入金额');
@@ -17,6 +21,7 @@ income.onclick=function(){
         }
         else{
             sum=(sum-(-inin));
+            localStorage.setItem('summ', sum);
             txt.textContent='现在有'+sum+'元';
             txt1.textContent+='收入'+inin+'元--';
     }    
@@ -34,6 +39,7 @@ outcome.onclick=function(){
         }
         else{
             sum=sum-outout;
+            localStorage.setItem('summ', sum);
             txt.textContent='现在有'+sum+'元';
             txt1.textContent+='支出'+outout+'元--';
     }    
