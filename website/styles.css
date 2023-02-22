@@ -1,0 +1,17 @@
+.income {
+ color:rgb(22, 35, 209);
+}
+.outcome {
+    color:red;
+}
+.income,.outcome {
+    font-weight: bold;
+    font-size: 200%;
+}
+p.tishi {
+    font-size: 180%;
+}
+.check {
+    color:aqua;
+    font-size: 80%;
+}
